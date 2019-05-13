@@ -1,0 +1,7 @@
+- !group
+  id: consumers
+
+- !grant
+  role: !group consumers
+  members:
+  - !host /conjur/authn-k8s/prod/apps1/app1_namespace/*/*

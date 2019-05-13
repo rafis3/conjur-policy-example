@@ -1,0 +1,6 @@
+- !policy
+  id: cf
+  body:
+    - !policy org1
+    - !policy org2
+    - !policy org3

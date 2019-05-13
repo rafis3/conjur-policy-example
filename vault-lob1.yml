@@ -1,0 +1,5 @@
+- !group lob1-admins
+ 
+- !policy
+  id: lob1
+  owner: !group lob1-admins

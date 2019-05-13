@@ -1,0 +1,7 @@
+- !group
+  id: consumers
+
+- !grant
+  role: !group consumers
+  members:
+  - !host /cf/org1/space1

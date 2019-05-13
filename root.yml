@@ -1,0 +1,13 @@
+- !policy cf
+- !policy conjur
+- !policy ci
+
+- !user
+  id: bob
+  annotations:
+    description: Bob is the vault-lob1 admin
+ 
+- !grant
+  role: !group vault/lob1-admins
+  members:
+  - !user bob

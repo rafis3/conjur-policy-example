@@ -1,0 +1,11 @@
+- !policy
+  id: org1
+  body:
+    - !host space1
+    - !group space1
+    
+    - !host space2
+    - !group space2
+
+    - !host space3
+    - !group space3

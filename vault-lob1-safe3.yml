@@ -1,0 +1,14 @@
+- !group safe3-admins
+
+- !user
+  id: john3
+  annotations:
+    description: John3 is the vault-lob1-safe3 admin
+ 
+- !grant
+  role: !group safe3-admins
+  members:
+  - !user john3
+
+- !policy
+  id: safe3

@@ -1,0 +1,14 @@
+- !policy
+  id: authn-k8s
+  body:
+    - !group k8s_prod_admins
+
+    - !user
+      id: gary
+      annotations:
+        description: Gary is the K8s prod cluster admin
+ 
+    - !grant
+      role: !group k8s_prod_admins
+      members:
+      - !user gary

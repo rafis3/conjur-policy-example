@@ -1,0 +1,33 @@
+- !policy
+  id: prod
+  owner: !group ../k8s_prod_admins
+  annotations:
+    description: Namespace defs for the Conjur cluster in dev
+  body:
+  - !webservice
+    annotations:
+      description: authn service for cluster
+
+  - !policy
+    id: ca 
+    body:
+    - !variable
+      id: cert
+      annotations:
+        description: CA cert for Kubernetes Pods.
+    - !variable
+      id: key
+      annotations:
+        description: CA key for Kubernetes Pods.
+
+  - !group k8s_prod_app1_admins
+
+  - !user
+    id: dana
+    annotations:
+      description: Dana is the K8s prod apps1 team admin
+
+  - !grant
+    role: !group k8s_prod_app1_admins
+    members:
+    - !user dana

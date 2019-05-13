@@ -1,0 +1,4 @@
+- !permit
+  resource: !webservice 
+  privilege: [ read, authenticate ]
+  role: !layer /conjur/authn-k8s/prod/apps1
