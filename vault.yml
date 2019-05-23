@@ -1,14 +1,9 @@
-- !group
-  id: vault-admins
- 
-- !policy
-  id: vault
-  owner: !group vault-admins
- 
-- !host
-  id: syncHostUser
+- !user
+  id: bob
+  annotations:
+    description: Bob is the vault-lob1 admin
  
 - !grant
-  role: !group vault-admins
+  role: !group lob1-admins
   members:
-  - !host syncHostUser
+  - !user bob

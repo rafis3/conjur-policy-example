@@ -1,13 +1,17 @@
 - !policy cf
 - !policy conjur
 - !policy ci
+- !policy
+  id: vault
+  owner: !group vault-admins
 
-- !user
-  id: bob
-  annotations:
-    description: Bob is the vault-lob1 admin
+- !group
+  id: vault-admins
+ 
+- !host
+  id: syncHostUser
  
 - !grant
-  role: !group vault/lob1-admins
+  role: !group vault-admins
   members:
-  - !user bob
+  - !host syncHostUser
